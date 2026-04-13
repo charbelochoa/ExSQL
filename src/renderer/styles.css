@@ -1,0 +1,1421 @@
+/* ============================================================
+   ExSQL Migrator - Estilos
+   Estilo auténtico Windows 7 / Office 2010
+   ============================================================ */
+
+:root {
+  /* Windows 7 Aero palette */
+  --bg-window: #f0f0f0;
+  --bg-panel: #ffffff;
+  --bg-toolbar: linear-gradient(to bottom, #ffffff, #e8ecf1);
+  --bg-ribbon: linear-gradient(to bottom, #dce2ed, #c4cdd9);
+  --bg-groupbox: #f7f8fa;
+  --bg-input: #ffffff;
+  --bg-selected: #3399ff;
+  --bg-selected-light: #cce8ff;
+  --bg-hover: #e5f3ff;
+  --text-primary: #1e1e1e;
+  --text-secondary: #444444;
+  --text-muted: #888888;
+  --text-link: #0066cc;
+  --accent: #2b5797;
+  --accent-light: #4a83c8;
+  --success: #2d8638;
+  --success-bg: #dff0d8;
+  --error: #c0392b;
+  --error-bg: #f2dede;
+  --warning: #b8860b;
+  --warning-bg: #fcf8e3;
+  --border: #acacac;
+  --border-light: #c6c6c6;
+  --border-dark: #707070;
+  --btn-face: linear-gradient(to bottom, #f0f0f0, #e5e5e5);
+  --btn-face-hover: linear-gradient(to bottom, #eaf6fd, #d9f0fc);
+  --btn-face-active: linear-gradient(to bottom, #d0e6f7, #b8d6f0);
+  --btn-face-primary: linear-gradient(to bottom, #4ea0db, #2b6fb0);
+  --btn-face-primary-hover: linear-gradient(to bottom, #5eb0eb, #3b7fc0);
+  --btn-face-danger: linear-gradient(to bottom, #e05050, #c02020);
+  --shadow-inset: inset 0 1px 2px rgba(0,0,0,0.12);
+  --shadow-btn: 0 1px 0 rgba(255,255,255,0.75) inset, 0 1px 2px rgba(0,0,0,0.1);
+  --ribbon-bg: linear-gradient(to bottom, #e8edf4, #d3dae5, #cdd5e1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  background: var(--bg-window);
+  color: var(--text-primary);
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================================
+   TITLEBAR / MENU BAR - Estilo clásico Windows
+   ============================================================ */
+.titlebar {
+  height: 26px;
+  background: linear-gradient(to bottom, #4c7fb8, #3a6a9f);
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  border-bottom: 1px solid #2c5580;
+  flex-shrink: 0;
+  -webkit-app-region: drag;
+}
+
+.titlebar-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 6px;
+}
+
+.titlebar-icon svg {
+  width: 14px;
+  height: 14px;
+  stroke: #ffffff;
+}
+
+.titlebar-text {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+  margin-right: 16px;
+}
+
+.menubar {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  -webkit-app-region: no-drag;
+}
+
+.menu-item {
+  padding: 2px 10px;
+  color: #e0e8f0;
+  font-size: 11px;
+  cursor: default;
+  border-radius: 2px;
+}
+
+.menu-item:hover {
+  background: rgba(255,255,255,0.15);
+  color: #ffffff;
+}
+
+/* ============================================================
+   RIBBON - Estilo Office 2010
+   ============================================================ */
+.ribbon {
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.ribbon-tabs {
+  display: flex;
+  gap: 0;
+  padding: 0 8px;
+  background: linear-gradient(to bottom, #e1e6ef, #cbd3de);
+  border-bottom: 1px solid #b0b8c4;
+}
+
+.ribbon-tab {
+  padding: 4px 14px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  cursor: default;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+  margin-bottom: -1px;
+}
+
+.ribbon-tab.active {
+  background: linear-gradient(to bottom, #f4f6fa, #ebeef5);
+  border-color: #b0b8c4;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.ribbon-tab:hover:not(.active) {
+  background: rgba(255,255,255,0.4);
+}
+
+.ribbon-content {
+  display: flex;
+  align-items: stretch;
+  padding: 4px 8px 6px;
+  background: linear-gradient(to bottom, #f2f4f8, #e8ebf0);
+  min-height: 66px;
+  gap: 2px;
+}
+
+.ribbon-group {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #d0d4dc;
+  padding: 0 10px;
+}
+
+.ribbon-group:last-child {
+  border-right: none;
+}
+
+.ribbon-group-content {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.ribbon-group-label {
+  text-align: center;
+  font-size: 9px;
+  color: var(--text-muted);
+  padding-top: 2px;
+  border-top: 1px solid #d4d8e0;
+  margin-top: 2px;
+}
+
+.ribbon-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 10px;
+  color: var(--text-primary);
+  min-width: 52px;
+}
+
+.ribbon-btn:hover {
+  background: linear-gradient(to bottom, #fdf4bf, #fce382);
+  border-color: #e5c365;
+  box-shadow: 0 0 0 1px rgba(229,195,101,0.3);
+}
+
+.ribbon-btn:active {
+  background: linear-gradient(to bottom, #fce382, #f5d040);
+}
+
+.ribbon-btn.small {
+  flex-direction: row;
+  gap: 4px;
+  min-width: auto;
+  font-size: 11px;
+  padding: 3px 8px;
+}
+
+.ribbon-btn span {
+  text-align: center;
+  line-height: 1.2;
+}
+
+.ribbon-separator {
+  width: 1px;
+  background: #c0c8d4;
+  margin: 2px 4px;
+}
+
+/* ============================================================
+   WIZARD STEPS BAR
+   ============================================================ */
+.steps-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 6px 24px;
+  background: linear-gradient(to bottom, #f8f9fb, #e9ecf2);
+  border-bottom: 1px solid var(--border-light);
+  flex-shrink: 0;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 12px;
+  font-size: 11px;
+  color: var(--text-muted);
+  cursor: default;
+}
+
+.step.active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.step.completed {
+  color: var(--success);
+}
+
+.step-number {
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  border: 1px solid var(--border-light);
+  background: linear-gradient(to bottom, #fff, #e8e8e8);
+}
+
+.step.active .step-number {
+  background: linear-gradient(to bottom, #5ba0d6, #2b70b0);
+  color: #fff;
+  border-color: #1e5a94;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.step.completed .step-number {
+  background: linear-gradient(to bottom, #5cb85c, #3a8a3a);
+  color: #fff;
+  border-color: #2d6e2d;
+}
+
+.step-line {
+  width: 32px;
+  height: 0;
+  border-top: 1px dashed var(--border-light);
+  margin: 0 2px;
+}
+
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 14px;
+  background: var(--bg-window);
+}
+
+.step-panel {
+  display: none;
+}
+
+.step-panel.active {
+  display: block;
+}
+
+/* ============================================================
+   BUTTONS - Estilo Windows 7 / Vista 3D bevelado
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 14px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: inherit;
+  background: var(--btn-face);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-btn);
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--btn-face-hover);
+  border-color: #7eb4ea;
+}
+
+.btn:active:not(:disabled) {
+  background: var(--btn-face-active);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.btn:focus-visible {
+  outline: 1px dotted #333;
+  outline-offset: -3px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.btn-primary {
+  background: var(--btn-face-primary);
+  color: #ffffff;
+  border-color: #225a8c;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--btn-face-primary-hover);
+}
+
+.btn-secondary {
+  background: var(--btn-face);
+  color: var(--text-primary);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text-link);
+  box-shadow: none;
+  text-decoration: underline;
+  padding: 4px 6px;
+}
+
+.btn-ghost:hover {
+  color: var(--accent);
+  background: transparent;
+  border-color: transparent;
+}
+
+.btn-danger {
+  background: var(--btn-face-danger);
+  color: #ffffff;
+  border-color: #991111;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+
+.btn-danger:hover:not(:disabled) {
+  opacity: 0.92;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 2px 6px;
+  line-height: 1;
+}
+
+/* ============================================================
+   GROUP BOX - fieldset clásico
+   ============================================================ */
+.group-box {
+  border: 1px solid var(--border-light);
+  border-radius: 0;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: var(--bg-panel);
+  box-shadow: 0 0 0 1px #fff inset;
+}
+
+.group-box-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* ============================================================
+   STEP 1 - Selección de archivo
+   ============================================================ */
+.panel-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+}
+
+.upload-zone {
+  text-align: center;
+  padding: 32px 40px;
+  border: 1px solid var(--border);
+  background: var(--bg-panel);
+  max-width: 440px;
+  width: 100%;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.08), 0 1px 0 #fff;
+}
+
+.upload-zone svg {
+  color: #217346;
+  opacity: 0.7;
+}
+
+.upload-zone h2 {
+  margin: 10px 0 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.upload-zone p {
+  color: var(--text-secondary);
+  font-size: 11px;
+  margin-bottom: 2px;
+}
+
+.upload-zone .hint {
+  color: var(--text-muted);
+  font-size: 10px;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+/* ============================================================
+   PROGRESS BAR - Estilo clásico XP/7 con gradiente verde
+   ============================================================ */
+.progress-container {
+  width: 360px;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background: #e4e4e4;
+  border: 1px solid #a8a8a8;
+  overflow: hidden;
+  margin: 6px 0;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.progress-bar.large {
+  height: 24px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to bottom, #39b54a, #269935 60%, #23862f);
+  transition: width 300ms ease;
+  width: 0%;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35);
+  background-size: 20px 20px;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255,255,255,0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255,255,255,0.15) 50%,
+    rgba(255,255,255,0.15) 75%,
+    transparent 75%,
+    transparent
+  ), linear-gradient(to bottom, #39b54a, #269935 60%, #23862f);
+  animation: progress-stripe 1s linear infinite;
+}
+
+@keyframes progress-stripe {
+  0% { background-position: 0 0; }
+  100% { background-position: 20px 0; }
+}
+
+#parse-progress-text {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* ============================================================
+   STEP 2 - Tablas
+   ============================================================ */
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.panel-header h2 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+  max-height: calc(100vh - 320px);
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.table-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-light);
+  padding: 8px 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+
+.table-card:hover {
+  border-color: #7eb4ea;
+  background: var(--bg-hover);
+}
+
+.table-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.table-card-header h3 {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.table-card-header .badge {
+  font-size: 10px;
+  padding: 1px 6px;
+  background: #dce6f4;
+  color: var(--accent);
+  border: 1px solid #b0c4de;
+}
+
+.table-card-meta {
+  display: flex;
+  gap: 10px;
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.table-card-columns {
+  font-size: 11px;
+}
+
+.col-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-top: 4px;
+}
+
+.col-tag {
+  padding: 1px 5px;
+  background: #eef1f6;
+  border: 1px solid #ccd2dc;
+  font-size: 10px;
+  color: var(--text-secondary);
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+
+.col-tag .type {
+  color: var(--warning);
+  margin-left: 3px;
+  font-weight: 600;
+}
+
+.panel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-light);
+}
+
+.footer-info {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   STEP 3 - Conexión
+   ============================================================ */
+.connection-form {
+  max-width: 640px;
+}
+
+.dialect-selector {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.dialect-btn {
+  flex: 1;
+  padding: 8px 10px;
+  background: var(--btn-face);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+  box-shadow: var(--shadow-btn);
+}
+
+.dialect-btn:hover {
+  background: var(--btn-face-hover);
+  border-color: #7eb4ea;
+}
+
+.dialect-btn.active {
+  border-color: var(--accent);
+  background: var(--bg-selected-light);
+  color: var(--accent);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.dialect-btn strong {
+  display: block;
+  font-size: 12px;
+}
+
+.dialect-btn small {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 4px 6px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-size: 12px;
+  font-family: inherit;
+  box-shadow: var(--shadow-inset);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #569de5;
+  box-shadow: var(--shadow-inset), 0 0 0 1px #97c3f0;
+}
+
+.form-group input:disabled {
+  background: #e8e8e8;
+  color: #999;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.connection-status {
+  font-size: 11px;
+  padding: 3px 8px;
+  border: 1px solid transparent;
+}
+
+.connection-status.success {
+  background: var(--success-bg);
+  color: var(--success);
+  border-color: #b2d8b2;
+}
+
+.connection-status.error {
+  background: var(--error-bg);
+  color: var(--error);
+  border-color: #dca7a7;
+}
+
+.options-section {
+  margin-top: 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-groupbox);
+  box-shadow: 0 0 0 1px #fff inset;
+}
+
+.options-section h3 {
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 13px;
+  height: 13px;
+}
+
+/* ============================================================
+   STEP 4 - Migración
+   ============================================================ */
+.migration-dashboard {
+  max-width: 720px;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.stat-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-light);
+  padding: 8px;
+  text-align: center;
+  box-shadow: inset 0 -1px 0 #fff, 0 1px 2px rgba(0,0,0,0.06);
+}
+
+.stat-value {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-top: 2px;
+}
+
+.migration-progress-section {
+  margin-bottom: 14px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 3px;
+}
+
+.current-table {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 3px;
+  font-style: italic;
+}
+
+.log-section {
+  margin-bottom: 14px;
+}
+
+.log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 3px;
+}
+
+.badge {
+  font-size: 10px;
+  padding: 1px 5px;
+  background: #e6e6e6;
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+}
+
+.badge.has-errors {
+  background: var(--error-bg);
+  color: var(--error);
+  border-color: #dca7a7;
+}
+
+.log-content {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  padding: 6px 8px;
+  max-height: 160px;
+  overflow-y: auto;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 11px;
+  box-shadow: var(--shadow-inset);
+}
+
+.log-entry {
+  padding: 1px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+}
+
+.log-entry.info { color: var(--text-secondary); }
+.log-entry.success { color: var(--success); }
+.log-entry.error { color: var(--error); }
+.log-entry.warning { color: var(--warning); }
+
+.migration-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* ============================================================
+   RESULTS
+   ============================================================ */
+.results-card {
+  text-align: center;
+  padding: 28px 20px;
+  margin-top: 14px;
+  border: 1px solid;
+}
+
+.results-card.success {
+  background: var(--success-bg);
+  border-color: #b2d8b2;
+}
+
+.results-card.success svg {
+  color: var(--success);
+}
+
+.results-card.failure {
+  background: var(--error-bg);
+  border-color: #dca7a7;
+}
+
+.results-card.failure svg {
+  color: var(--error);
+}
+
+.results-card h2 {
+  margin: 10px 0 5px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.results-card p {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.results-details {
+  margin-top: 14px;
+  text-align: left;
+  font-size: 11px;
+}
+
+.results-details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 6px;
+  border: 1px solid var(--border-light);
+}
+
+.results-details th,
+.results-details td {
+  padding: 4px 8px;
+  text-align: left;
+  border: 1px solid #d4d4d4;
+}
+
+.results-details th {
+  background: linear-gradient(to bottom, #f2f4f8, #e2e6ec);
+  color: var(--text-secondary);
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.results-details td {
+  background: #fff;
+}
+
+.results-actions {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.results-notes {
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid #d9d2a5;
+  background: #fffbe7;
+}
+
+.results-notes h4 {
+  margin-bottom: 8px;
+  color: #8a6d1f;
+  font-size: 12px;
+}
+
+.results-notes ul {
+  margin-left: 18px;
+}
+
+.results-notes li {
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+}
+
+/* ============================================================
+   MODAL - Diálogo clásico Windows
+   ============================================================ */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: var(--bg-window);
+  border: 1px solid #555;
+  width: 85%;
+  max-width: 640px;
+  max-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.1) inset;
+}
+
+.modal-content.wide {
+  width: 94%;
+  max-width: 1160px;
+  max-height: 86vh;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: linear-gradient(to bottom, #4c7fb8, #3a6a9f);
+  color: #ffffff;
+  border-bottom: 1px solid #2c5580;
+}
+
+.modal-header h3 {
+  font-size: 12px;
+  font-weight: 400;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+
+.modal-header .btn-close {
+  color: #e0e8f0;
+}
+
+.modal-header .btn-close:hover {
+  color: #ffffff;
+}
+
+.modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  background: #fff;
+}
+
+.modal-body pre {
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 11px;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 8px 12px;
+  background: var(--bg-window);
+  border-top: 1px solid var(--border-light);
+}
+
+/* ============================================================
+   SQL EXPLORER
+   ============================================================ */
+.sql-explorer-body {
+  padding: 0;
+  background: var(--bg-window);
+}
+
+.sql-explorer-layout {
+  display: flex;
+  min-height: 640px;
+}
+
+.sql-sidebar {
+  width: 260px;
+  border-right: 1px solid var(--border-light);
+  background: linear-gradient(to bottom, #f6f8fb, #edf1f6);
+  display: flex;
+  flex-direction: column;
+}
+
+.sql-main {
+  flex: 1;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 10px;
+  padding: 10px;
+  background: linear-gradient(to bottom, #f5f7fa, #eef2f7);
+}
+
+.sql-pane-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 8px;
+  background: linear-gradient(to bottom, #f7f9fc, #e6ebf2);
+  border-bottom: 1px solid var(--border-light);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.sql-table-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sql-table-item {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--border-light);
+  background: linear-gradient(to bottom, #ffffff, #f6f8fb);
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.75) inset;
+}
+
+.sql-table-item:hover {
+  background: linear-gradient(to bottom, #fff8d6, #f6e9a8);
+  border-color: #d8bc5e;
+}
+
+.sql-table-item strong {
+  display: block;
+  font-size: 11px;
+  color: var(--text-primary);
+}
+
+.sql-table-item small {
+  display: block;
+  margin-top: 2px;
+  color: var(--text-muted);
+  font-size: 10px;
+}
+
+.sql-editor-card,
+.sql-results-card,
+.sql-chart-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.85) inset;
+}
+
+.sql-editor-content {
+  padding: 10px;
+}
+
+.sql-query-editor {
+  width: 100%;
+  min-height: 120px;
+  resize: vertical;
+  border: 1px solid var(--border);
+  padding: 8px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 11px;
+  color: var(--text-primary);
+  background: #fffef5;
+  box-shadow: var(--shadow-inset);
+}
+
+.sql-editor-actions {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sql-editor-hint {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.sql-query-status {
+  margin-top: 8px;
+  padding: 6px 8px;
+  border: 1px solid transparent;
+  font-size: 11px;
+}
+
+.sql-query-status.info {
+  background: #f3f6fb;
+  border-color: #d0dae8;
+  color: var(--text-secondary);
+}
+
+.sql-query-status.success {
+  background: var(--success-bg);
+  border-color: #b5d7bc;
+  color: var(--success);
+}
+
+.sql-query-status.error {
+  background: var(--error-bg);
+  border-color: #dfb1b1;
+  color: var(--error);
+}
+
+.sql-query-status.warning {
+  background: var(--warning-bg);
+  border-color: #e6d89c;
+  color: var(--warning);
+}
+
+.sql-results-table {
+  overflow: auto;
+  max-height: 250px;
+  padding: 10px;
+}
+
+.sql-results-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.sql-results-table th,
+.sql-results-table td {
+  padding: 4px 8px;
+  border: 1px solid #d5d5d5;
+  text-align: left;
+  vertical-align: top;
+}
+
+.sql-results-table th {
+  background: linear-gradient(to bottom, #f2f4f8, #e2e6ec);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+}
+
+.sql-results-table td {
+  background: #ffffff;
+  max-width: 220px;
+  word-break: break-word;
+}
+
+.sql-empty-state {
+  padding: 18px;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-style: italic;
+}
+
+.sql-chart-controls {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid var(--border-light);
+  background: linear-gradient(to bottom, #fcfdff, #f2f5fa);
+}
+
+.sql-chart-controls .form-group {
+  margin-bottom: 0;
+}
+
+.sql-chart-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.sql-chart-canvas-wrap {
+  position: relative;
+  flex: 1;
+  min-height: 360px;
+  padding: 12px;
+  background: #ffffff;
+}
+
+.sql-chart-canvas {
+  width: 100%;
+  height: 340px;
+  border: 1px solid var(--border-light);
+  background: linear-gradient(to bottom, #ffffff, #f9fbfe);
+}
+
+.sql-chart-empty {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.9);
+  border: 1px dashed var(--border-light);
+}
+
+@media (max-width: 980px) {
+  .sql-explorer-layout {
+    flex-direction: column;
+  }
+
+  .sql-sidebar {
+    width: 100%;
+    max-height: 180px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .sql-chart-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ============================================================
+   STATUS BAR - Barra de estado clásica
+   ============================================================ */
+.statusbar {
+  height: 22px;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  background: linear-gradient(to bottom, #e8ecf2, #d8dce4);
+  border-top: 1px solid #b8bcc4;
+  flex-shrink: 0;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.statusbar-item {
+  padding: 0 8px;
+}
+
+.statusbar-separator {
+  width: 1px;
+  height: 14px;
+  background: var(--border-light);
+  margin: 0 2px;
+}
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+.hidden { display: none !important; }
+
+/* ============================================================
+   SCROLLBAR - Estilo clásico Windows 7
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 17px;
+  height: 17px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border: 1px solid #d6d6d6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #c2c2c2, #ababab, #c2c2c2);
+  border: 1px solid #969696;
+  min-height: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, #a8a8a8, #8a8a8a, #a8a8a8);
+}
+
+::-webkit-scrollbar-button:single-button {
+  display: block;
+  height: 17px;
+  width: 17px;
+  background: linear-gradient(to bottom, #f4f4f4, #dcdcdc);
+  border: 1px solid #a0a0a0;
+}
+
+::-webkit-scrollbar-button:single-button:hover {
+  background: linear-gradient(to bottom, #e8f4fc, #cce4f6);
+  border-color: #7eb4ea;
+}
+
+::-webkit-scrollbar-corner {
+  background: #f0f0f0;
+}
